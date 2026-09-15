@@ -20,3 +20,5 @@ shape = SubResource("CircleShape2D_rwgxs")
 scale = Vector2(3, 3)
 texture = ExtResource("1_nnsk1")
 offset = Vector2(0, -2)
+
+[node name="DayNight" type="CanvasModulate" parent="." unique_id=1967759883]
