@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://doc8ajq0fkhbl" path="res://scripts/update_day_night.gd" id="1_71j4m"]
 [ext_resource type="Texture2D" uid="uid://o870dp8i77y2" path="res://assets/sprites/character.png" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://d7fxo7g21obn" path="res://scripts/player.gd" id="1_rwgxs"]
-[ext_resource type="Texture2D" uid="uid://6jcwfj1e2182" path="res://assets/Terrian/grass.png" id="3_k0juu"]
-[ext_resource type="Texture2D" uid="uid://c4ga3aqxyr824" path="res://assets/Terrian/path.png" id="4_71j4m"]
+[ext_resource type="Texture2D" uid="uid://6jcwfj1e2182" path="res://assets/terrain/grass.png" id="3_k0juu"]
+[ext_resource type="Texture2D" uid="uid://c4ga3aqxyr824" path="res://assets/terrain/path.png" id="4_71j4m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_nnsk1")
