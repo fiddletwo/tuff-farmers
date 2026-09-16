@@ -1,24 +1,24 @@
 extends Node
 
-@export var DAY_DURATION: float = 60.0
-@export var NIGHT_DURATION: float = 30.0
+var DAY_DURATION: float = 60.0
+var NIGHT_DURATION: float = 30.0
 
-var currentTime: float = 0.0
-var isDay := true
+var _current_time: float = 0.0
+var _is_day := true
 
 signal update(state: bool)
 
 func _process(dt: float) -> void:
-    currentTime += dt
+    _current_time += dt
     
-    if isDay and currentTime >= DAY_DURATION:
-        currentTime = fmod(currentTime, DAY_DURATION)
-        isDay = false
+    if _is_day and _current_time >= DAY_DURATION:
+        _current_time = fmod(_current_time, DAY_DURATION)
+        _is_day = false
         
-        update.emit(isDay)
-    elif not isDay and currentTime >= NIGHT_DURATION:
-        currentTime = fmod(currentTime, NIGHT_DURATION)
-        isDay = true
+        update.emit(_is_day)
+    elif not _is_day and _current_time >= NIGHT_DURATION:
+        _current_time = fmod(_current_time, NIGHT_DURATION)
+        _is_day = true
         
-        update.emit(isDay)
+        update.emit(_is_day)
         
