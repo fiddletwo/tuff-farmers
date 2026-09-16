@@ -6,7 +6,7 @@ extends Node
 var currentTime: float = 0.0
 var isDay := true
 
-signal day_night_cycle(state: bool)
+signal update(state: bool)
 
 func _process(dt: float) -> void:
     currentTime += dt
@@ -15,10 +15,10 @@ func _process(dt: float) -> void:
         currentTime = fmod(currentTime, DAY_DURATION)
         isDay = false
         
-        day_night_cycle.emit(isDay)
+        update.emit(isDay)
     elif not isDay and currentTime >= NIGHT_DURATION:
         currentTime = fmod(currentTime, NIGHT_DURATION)
         isDay = true
         
-        day_night_cycle.emit(isDay)
+        update.emit(isDay)
         

@@ -1,12 +1,10 @@
 [gd_scene format=4 uid="uid://dti73bxpgov5l"]
 
+[ext_resource type="Script" uid="uid://doc8ajq0fkhbl" path="res://scripts/update_day_night.gd" id="1_71j4m"]
 [ext_resource type="Texture2D" uid="uid://o870dp8i77y2" path="res://assets/sprites/character.png" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://d7fxo7g21obn" path="res://scripts/player.gd" id="1_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://6jcwfj1e2182" path="res://assets/Terrian/grass.png" id="3_k0juu"]
 [ext_resource type="Texture2D" uid="uid://c4ga3aqxyr824" path="res://assets/Terrian/path.png" id="4_71j4m"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rwgxs"]
-radius = 40.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_nnsk1")
@@ -60,22 +58,13 @@ texture_region_size = Vector2i(18, 16)
 [sub_resource type="TileSet" id="TileSet_3t0mr"]
 sources/0 = SubResource("TileSetAtlasSource_4mrxx")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwgxs"]
+radius = 15.0
+
 [node name="World" type="Node2D" unique_id=1647938521]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=789030943]
-slide_on_ceiling = false
-floor_stop_on_slope = false
-script = ExtResource("1_rwgxs")
-
-[node name="Collider" type="CollisionShape2D" parent="Player" unique_id=669105394]
-shape = SubResource("CircleShape2D_rwgxs")
-
-[node name="Sprite" type="Sprite2D" parent="Player" unique_id=1272220533]
-scale = Vector2(3, 3)
-texture = ExtResource("1_nnsk1")
-offset = Vector2(0, -2)
-
 [node name="DayNight" type="CanvasModulate" parent="." unique_id=1967759883]
+script = ExtResource("1_71j4m")
 
 [node name="Bush" type="TileMapLayer" parent="." unique_id=2035119491]
 z_index = 1
@@ -93,3 +82,16 @@ tile_set = SubResource("TileSet_3t0mr")
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1067886583]
 tile_map_data = PackedByteArray("AAATAA8AAAAAAAEAAAATABAAAAAAAAIAAAAUAA8AAAABAAEAAAAUABAAAAABAAIAAAAVAA8AAAACAAEAAAAVABAAAAACAAIAAAATAA0AAAAAAAEAAAATAA4AAAAAAAIAAAAUAA0AAAABAAEAAAAUAA4AAAABAAIAAAAVAA0AAAACAAEAAAAVAA4AAAACAAIAAAATAAsAAAAAAAEAAAATAAwAAAAAAAIAAAAUAAsAAAABAAEAAAAUAAwAAAABAAIAAAAVAAsAAAACAAEAAAAVAAwAAAACAAIAAAAeAA0AAAAAAAEAAAAeAA4AAAAAAAIAAAAfAA0AAAABAAEAAAAfAA4AAAABAAIAAAAgAA0AAAACAAEAAAAgAA4AAAACAAIAAAAeAAsAAAAAAAEAAAAeAAwAAAAAAAIAAAAfAAsAAAABAAEAAAAfAAwAAAABAAIAAAAgAAsAAAACAAEAAAAgAAwAAAACAAIAAAAjAA4AAAAAAAEAAAAjAA8AAAAAAAIAAAAkAA4AAAABAAEAAAAkAA8AAAABAAIAAAAlAA4AAAACAAEAAAAlAA8AAAACAAIAAAAjAAwAAAAAAAEAAAAjAA0AAAAAAAIAAAAkAAwAAAABAAEAAAAkAA0AAAABAAIAAAAlAAwAAAACAAEAAAAlAA0AAAACAAIAAAAjAAoAAAAAAAEAAAAjAAsAAAAAAAIAAAAkAAoAAAABAAEAAAAkAAsAAAABAAIAAAAlAAoAAAACAAEAAAAlAAsAAAACAAIAAAAjAAgAAAAAAAEAAAAjAAkAAAAAAAIAAAAkAAgAAAABAAEAAAAkAAkAAAABAAIAAAAlAAgAAAACAAEAAAAlAAkAAAACAAIAAAAnAA0AAAAAAAEAAFAnAA4AAAABAAEAAFAnAA8AAAACAAEAAFAmAA0AAAAAAAIAAFAmAA4AAAABAAIAAFAmAA8AAAACAAIAAFAnAAgAAAAAAAEAAFAnAAkAAAABAAEAAFAnAAoAAAACAAEAAFAmAAgAAAAAAAIAAFAmAAkAAAABAAIAAFAmAAoAAAACAAIAAFA=")
 tile_set = SubResource("TileSet_3t0mr")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=789030943]
+position = Vector2(190, 47)
+slide_on_ceiling = false
+floor_stop_on_slope = false
+script = ExtResource("1_rwgxs")
+
+[node name="Collider" type="CollisionShape2D" parent="Player" unique_id=669105394]
+shape = SubResource("CircleShape2D_rwgxs")
+
+[node name="Sprite" type="Sprite2D" parent="Player" unique_id=1272220533]
+texture = ExtResource("1_nnsk1")
+offset = Vector2(0, -2)
