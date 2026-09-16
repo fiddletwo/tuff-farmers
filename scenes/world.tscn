@@ -95,3 +95,8 @@ shape = SubResource("CircleShape2D_rwgxs")
 [node name="Sprite" type="Sprite2D" parent="Player" unique_id=1272220533]
 texture = ExtResource("1_nnsk1")
 offset = Vector2(0, -2)
+
+[node name="Camera" type="Camera2D" parent="Player" unique_id=511554434]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
