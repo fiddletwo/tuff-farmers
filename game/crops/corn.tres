@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Crop" format=3 uid="uid://dg2bq4ucrpem4"]
+
+[ext_resource type="Script" uid="uid://fg3d75phihkh" path="res://scripts/farming/crop_info.gd" id="1_226c3"]
+
+[resource]
+script = ExtResource("1_226c3")
+growth_interval = 0.3
+metadata/_custom_type_script = "uid://fg3d75phihkh"

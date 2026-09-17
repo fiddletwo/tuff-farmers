@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dhvua5fsbbhr8"]
+
+[ext_resource type="Script" uid="uid://cjt6t0nnrlmra" path="res://scripts/farming/crop.gd" id="1_pl0dt"]
+
+[node name="Crop" type="Node2D" unique_id=1927259062]
+script = ExtResource("1_pl0dt")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=829982118]

@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://dti73bxpgov5l"]
 
-[ext_resource type="Script" uid="uid://doc8ajq0fkhbl" path="res://scripts/update_day_night.gd" id="1_71j4m"]
+[ext_resource type="Script" uid="uid://doc8ajq0fkhbl" path="res://scripts/game/transition_day_night.gd" id="1_71j4m"]
 [ext_resource type="Texture2D" uid="uid://o870dp8i77y2" path="res://assets/sprites/character.png" id="1_nnsk1"]
-[ext_resource type="Script" uid="uid://d7fxo7g21obn" path="res://scripts/player.gd" id="1_rwgxs"]
+[ext_resource type="Script" uid="uid://d7fxo7g21obn" path="res://scripts/player/movement.gd" id="1_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://6jcwfj1e2182" path="res://assets/terrain/grass.png" id="3_k0juu"]
 [ext_resource type="Texture2D" uid="uid://dco646v2t2kg7" path="res://assets/terrain/path_1.png" id="4_i7141"]
 [ext_resource type="Texture2D" uid="uid://cxna1mxikojrv" path="res://assets/terrain/path_2.png" id="5_4mrxx"]
-[ext_resource type="Script" uid="uid://bj3puf670s84i" path="res://scripts/farming/crop_aging.gd" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://dhvua5fsbbhr8" path="res://scenes/crop.tscn" id="6_qfnet"]
+[ext_resource type="Script" uid="uid://c6hyjtjr2x2lw" path="res://scripts/farming/farm_manager.gd" id="7_i7141"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_nnsk1")
@@ -101,8 +102,6 @@ sources/1 = SubResource("TileSetAtlasSource_w7kh3")
 [sub_resource type="CircleShape2D" id="CircleShape2D_rwgxs"]
 radius = 15.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwy8p"]
-
 [node name="World" type="Node2D" unique_id=1647938521]
 
 [node name="DayNight" type="CanvasModulate" parent="." unique_id=1967759883]
@@ -141,15 +140,7 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
-[node name="Carrot" type="Area2D" parent="." unique_id=400548419]
-position = Vector2(66, 71)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot" unique_id=598299976]
-scale = Vector2(1.6, 1.6)
-shape = SubResource("RectangleShape2D_mwy8p")
-
-[node name="CropAging" type="Node" parent="Carrot" unique_id=307660692]
-script = ExtResource("6_qfnet")
+[node name="Crop" parent="." unique_id=1927259062 instance=ExtResource("6_qfnet")]
 
 [node name="Button" type="Button" parent="." unique_id=1679327286]
 anchors_preset = 5
@@ -159,3 +150,6 @@ offset_left = -34.0
 offset_right = 34.0
 offset_bottom = 62.0
 grow_horizontal = 2
+
+[node name="FarmManager" type="Node" parent="." unique_id=1555715906]
+script = ExtResource("7_i7141")

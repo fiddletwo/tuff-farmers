@@ -10,6 +10,6 @@ func _process(dt: float) -> void:
     if _current_time >= TICK_RATE:
         _current_time = fmod(_current_time, TICK_RATE)
         
-        for crop in get_tree().get_nodes_in_group(CropAging.group_name):
+        for crop in get_tree().get_nodes_in_group(Crop.group_name):
             var growth = randf_range(0.12, 0.23)
             crop.current_age += growth
