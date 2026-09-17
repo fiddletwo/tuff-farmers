@@ -15,11 +15,6 @@ run/main_scene="uid://dti73bxpgov5l"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-DayNightCycle="*uid://dj0st0cliumhg"
-CropAger="uid://oi8c66yoaor1"
-
 [display]
 
 window/size/viewport_width=1920

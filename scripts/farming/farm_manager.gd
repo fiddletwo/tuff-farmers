@@ -1,5 +1,5 @@
 class_name FarmManager
-extends Node
+extends Node2D
 
 var crop_scene = preload("res://scenes/crop.tscn")
 
