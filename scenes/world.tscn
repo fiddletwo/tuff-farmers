@@ -165,5 +165,6 @@ script = ExtResource("1_71j4m")
 
 [node name="CropManager" type="Node2D" parent="." unique_id=1728834605]
 script = ExtResource("9_w7kh3")
+TICK_RATE = 5.0
 
 [connection signal="update" from="DayNightCycle" to="DayNightCycle/Transition" method="_on_day_night_cycle_update"]

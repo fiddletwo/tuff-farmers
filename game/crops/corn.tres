@@ -1,10 +1,14 @@
 [gd_resource type="Resource" script_class="CropInfo" format=3 uid="uid://dg2bq4ucrpem4"]
 
 [ext_resource type="Script" uid="uid://fg3d75phihkh" path="res://scripts/farming/crop_info.gd" id="1_226c3"]
-[ext_resource type="Texture2D" uid="uid://o870dp8i77y2" path="res://assets/sprites/character.png" id="2_v1mwr"]
+[ext_resource type="Texture2D" uid="uid://dvddu8x2umq6u" path="res://assets/sprites/crops/corn/corn_0.png" id="2_5ofdl"]
+[ext_resource type="Texture2D" uid="uid://cc4mfu6muludu" path="res://assets/sprites/crops/corn/corn_1.png" id="3_d2t8f"]
+[ext_resource type="Texture2D" uid="uid://g6xv1jmlndxk" path="res://assets/sprites/crops/corn/corn_2.png" id="4_v5qdr"]
+[ext_resource type="Texture2D" uid="uid://bijoii26ba6r4" path="res://assets/sprites/crops/corn/corn_3.png" id="5_tl1kd"]
 
 [resource]
 script = ExtResource("1_226c3")
-sprites = Array[Texture]([ExtResource("2_v1mwr")])
+sprites = Array[Texture]([ExtResource("2_5ofdl"), ExtResource("3_d2t8f"), ExtResource("4_v5qdr"), ExtResource("5_tl1kd")])
 growth_interval = 0.2
+max_stages = 4
 metadata/_custom_type_script = "uid://fg3d75phihkh"
