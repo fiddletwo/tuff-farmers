@@ -12,9 +12,8 @@ var growth_progress: float = 0.0 :
 
 @onready var sprite: Sprite2D = $Sprite
 
-func _ready() -> void:
-    add_to_group(group_name)
-
 func initialize(info: CropInfo) -> void:
     crop_info = info
     sprite.texture = crop_info.sprites[0]
+    
+    add_to_group(group_name)

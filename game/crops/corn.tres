@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Crop" format=3 uid="uid://dg2bq4ucrpem4"]
+[gd_resource type="Resource" script_class="CropInfo" format=3 uid="uid://dg2bq4ucrpem4"]
 
 [ext_resource type="Script" uid="uid://fg3d75phihkh" path="res://scripts/farming/crop_info.gd" id="1_226c3"]
+[ext_resource type="Texture2D" uid="uid://o870dp8i77y2" path="res://assets/sprites/character.png" id="2_v1mwr"]
 
 [resource]
 script = ExtResource("1_226c3")
-growth_interval = 0.3
+sprites = Array[Texture]([ExtResource("2_v1mwr")])
+growth_interval = 0.2
 metadata/_custom_type_script = "uid://fg3d75phihkh"

@@ -1,8 +1,8 @@
 class_name DayNightCycle
 extends Node2D
 
-var DAY_DURATION: float = 6.0
-var NIGHT_DURATION: float = 3.0
+var DAY_DURATION: float = 60.0
+var NIGHT_DURATION: float = 30.0
 
 var _current_time: float = 0.0
 var _is_day := true
