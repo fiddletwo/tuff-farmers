@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbydmybkpismu"
-path="res://.godot/imported/path_terrain.png-66cb5b54089639fd8253d0245276e828.ctex"
+uid="uid://b07l40ffvd83e"
+path="res://.godot/imported/360_F_524870155_pRYG2Ac6igOhmXQEdCVRYGWSkeHTaaYj.jpg-5a02ffbf460a86b0919a06cbdb796c64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain/path_terrain.png"
-dest_files=["res://.godot/imported/path_terrain.png-66cb5b54089639fd8253d0245276e828.ctex"]
+source_file="res://assets/360_F_524870155_pRYG2Ac6igOhmXQEdCVRYGWSkeHTaaYj.jpg"
+dest_files=["res://.godot/imported/360_F_524870155_pRYG2Ac6igOhmXQEdCVRYGWSkeHTaaYj.jpg-5a02ffbf460a86b0919a06cbdb796c64.ctex"]
 
 [params]
 
