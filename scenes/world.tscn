@@ -150,3 +150,12 @@ shape = SubResource("RectangleShape2D_mwy8p")
 
 [node name="CropAging" type="Node" parent="Carrot" unique_id=307660692]
 script = ExtResource("6_qfnet")
+
+[node name="Button" type="Button" parent="." unique_id=1679327286]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 34.0
+offset_bottom = 62.0
+grow_horizontal = 2

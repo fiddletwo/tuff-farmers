@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://ctrwbe18ttuhl"]
 
 [ext_resource type="Script" uid="uid://v4hase0i3fg0" path="res://scenes/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://b07l40ffvd83e" path="res://assets/360_F_524870155_pRYG2Ac6igOhmXQEdCVRYGWSkeHTaaYj.jpg" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://nbpiy6x8i7q1" path="res://assets/Fascinate-Regular.ttf" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oaqru"]
-texture = ExtResource("1_l6cm7")
-modulate_color = Color(0.27022192, 0.27022192, 0.2702219, 1)
+modulate_color = Color(0.27481404, 0.16231135, 0.011555423, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oaqru"]
 bg_color = Color(1, 1, 1, 1)
@@ -99,21 +98,19 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Exit
 "
 
-[node name="Label" type="Label" parent="." unique_id=1903654320]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=240711245]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -190.5
-offset_top = -400.0
-offset_right = 190.5
-offset_bottom = -251.0
+offset_left = -422.0
+offset_right = 422.0
+offset_bottom = 377.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 120
-text = "Tuff Farmers"
+theme_override_fonts/normal_font = ExtResource("2_ekxnf")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave][rainbow]Tuff Farmers[/rainbow][/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
