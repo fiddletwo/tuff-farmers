@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctrwbe18ttuhl"]
 
 [ext_resource type="Script" uid="uid://v4hase0i3fg0" path="res://scenes/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="FontFile" uid="uid://nbpiy6x8i7q1" path="res://assets/Fascinate-Regular.ttf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://nbpiy6x8i7q1" path="res://assets/fonts/Fascinate-Regular.ttf" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oaqru"]
 modulate_color = Color(0.27481404, 0.16231135, 0.011555423, 1)
@@ -54,7 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_oaqru")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1290212454]
+[node name="Container" type="VBoxContainer" parent="." unique_id=1290212454]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 21
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=2083984411]
+[node name="Start" type="Button" parent="Container" unique_id=2083984411]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -83,7 +83,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=958439554]
+[node name="Exist" type="Button" parent="Container" unique_id=958439554]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -98,7 +98,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Exit
 "
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=240711245]
+[node name="Title" type="RichTextLabel" parent="." unique_id=240711245]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -114,5 +114,5 @@ text = "[wave][rainbow]Tuff Farmers[/rainbow][/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Container/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Container/Exist" to="." method="_on_exit_pressed"]

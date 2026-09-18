@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tuff Farmers"
-run/main_scene="uid://dti73bxpgov5l"
+run/main_scene="uid://ctrwbe18ttuhl"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
