@@ -8,6 +8,7 @@ var crops: Dictionary[String, Resource] = {
 }
 
 var tile_map: Dictionary[Vector2i, Crop] = {}
+@onready var tile_layer: TileMapLayer = $Plantable
 
 func plant_crop(crop_name: String) -> void:
     var crop_info = crops.get(crop_name)
@@ -18,3 +19,6 @@ func plant_crop(crop_name: String) -> void:
     var crop = crop_scene.instantiate()
     add_child(crop)
     crop.initialize(crop_info)
+
+#func till_land(coords: Vector2i) -> void:
+    #pass
